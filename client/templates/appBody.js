@@ -1,4 +1,0 @@
-Template.appBody.helpers({
-
-
-})
