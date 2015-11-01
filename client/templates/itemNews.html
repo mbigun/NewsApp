@@ -1,0 +1,25 @@
+<template name="itemNews">
+    {{#if title}}
+    <div class="col-sm-6 col-lg-6 col-md-6">
+        <div class="thumbnail">
+            <img src="https://unsplash.it/320/150/?random" alt="">
+            <div class="caption">
+                <h5 class="pull-right"><small>{{createdOn}}</small></h5>
+                <h5><strong><a href="{{pathFor 'viewNews'}}">{{title}}</a></strong>
+                </h5>
+                <p>{{content}}</p>
+            </div>
+            <div class="ratings">
+                <p class="pull-right">Posted by: {{createdBy}}</p>
+                <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span></p>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-9">
+            <p class="bg-warning pull-left lead">There are no news in this category</p>
+        </div>
+        {{/if}}
+    </template>

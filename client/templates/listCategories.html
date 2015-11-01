@@ -1,10 +1,7 @@
 <template name="listCategories">
-	<div class="col-md-3">
-		<p class="lead">Categories</p>
-		<div class="list-group">
-			{{#each categories}}
-				<a href="{{pathFor 'listNews'}}" class="list-group-item">{{category}}</a>
-			{{/each}}
-		</div>
+	<div class="list-group">
+		{{#each categories}}
+		<a href="{{pathFor 'appHome'}}" class="list-group-item current-category">{{category}}</a>
+		{{/each}}
 	</div>
 </template>

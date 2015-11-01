@@ -1,0 +1,2 @@
+Template.itemNews.helpers({
+});

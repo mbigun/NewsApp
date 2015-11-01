@@ -1,10 +1,26 @@
 <template name="appHome">
-	<div class="row">
+	<div class="col-md-3">
+		<p class="lead">Categories</p>
 		{{> listCategories}}
-		<div class="col-md-9">
-			<div class="row">
-				<h2>This is a sample of home page.</h2>
-			</div>
+	</div>
+	<div class="col-md-9">
+	{{#with _id}}
+		<p class="pull-left lead">News</p>
+		{{#if currentUser}}
+		<span class="pull-right">
+			<a class="btn btn-primary" href="{{pathFor 'addNews'}}">Add more news</a>
+		</span>
+		{{/if}}
+		<div class="clearfix"></div>
+		<div class="row">			
+		{{#each news this}}
+			{{> itemNews}}
+		{{else}}
+			<h2>There are no news in this category</h2>
+		{{/each}}
 		</div>
+	{{else}}
+		{{> appSlider}}		
+	{{/with}}
 	</div>
 </template>

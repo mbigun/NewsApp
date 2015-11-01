@@ -1,0 +1,25 @@
+<template name="appRegister">
+	<div class="col-md-3 col-md-offset-4">
+		<p class="lead text-center">Registration</p>
+		<form>
+			 {{#if errorMessages}}
+              	{{#each errorMessages}}
+                	<p class="bg-danger">{{this}}</p>
+              	{{/each}}
+          	{{/if}}
+			<div class="form-group">
+				<input class="form-control" type="email" name="registerEmail" placeholder="Email">
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="password" name="registerPassword" placeholder="Password">
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="password" name="registerPasswordConfirm" placeholder="Confirm Password" />
+			</div>
+			<div class="form-group">
+				<input class="btn btn-primary btn-block" type="submit" value="Register">
+			</div>
+		</form>
+	</div>
+
+</template>
