@@ -1,12 +1,12 @@
 <template name="appLogin">
 	<div class="col-md-3 col-md-offset-4">
-	<p class="lead text-center">Login</p>
+		<p class="lead text-center">Login</p>
 		<form>
-		    {{#if errorMessages}}
-              	{{#each errorMessages}}
-                	<p class="bg-danger">{{this}}</p>
-              	{{/each}}
-          	{{/if}}
+			{{#if errorMessages}}
+			{{#each errorMessages}}
+			<p class="bg-danger">{{this}}</p>
+			{{/each}}
+			{{/if}}
 			<div class="form-group">
 				<input class="form-control" type="email" name="loginEmail" placeholder="Email">
 			</div>
@@ -18,6 +18,9 @@
 			</div>
 			<div class="form-group">
 				<a href="{{pathFor 'appRegister'}}" class="btn btn-primary btn-block" role="button">Register</a>
+			</div>
+			<div class="form-group">
+				<a href="#" id="facebook-login" class="btn btn-primary btn-block" role="button">Login with facebook</a>
 			</div>
 		</form>
 	</div>

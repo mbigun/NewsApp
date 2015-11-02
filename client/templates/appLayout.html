@@ -20,12 +20,18 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					{{#if currentUser}}
-					 <li>
-                    	<a href="#">Welcome, {{userEmail}}!</a>
-                    </li>
-                    <li>
-                    	<a class="event-logout" href="#">LogOut</a>
-                    </li>
+						{{#if currentUser.services.facebook.name}}
+					 	<li>
+                    		<a href="#">Welcome, {{currentUser.services.facebook.name}}!</a>
+                    	</li>
+                   		{{else}}
+                   		<li>
+                    		<a href="#">Welcome, {{userEmail}}!</a>
+                    	</li>
+                   		{{/if}}
+                   		<li>
+                    		<a class="event-logout" href="#">LogOut</a>
+                   		</li>
 					{{else}}
                     <li>
                     	<a href="{{pathFor 'appLogin'}}">Login</a>

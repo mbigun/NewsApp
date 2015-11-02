@@ -22,3 +22,5 @@ iron:router
 twbs:bootstrap
 richsilv:owl-carousel
 accounts-password
+accounts-facebook
+service-configuration
